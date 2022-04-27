@@ -1,4 +1,4 @@
-import atividade1204
+import registroMercadorias
 
 valorTotal = 0
 condicao = "s"
@@ -19,13 +19,13 @@ while condicao == "s":
     while valorUni <= 0:
         valorUni = int(input("O valor unitário não pode ser igual ou inferior a zero.\nDigite novamente: "))
 
-    mTotal = atividade1204.mercadoriaTotal(nome, quantMin, quantMax, quantAtual, valorUni)
+    mTotal = registroMercadorias.mercadoriaTotal(nome, quantMin, quantMax, quantAtual, valorUni)
     if quantAtual < quantMin:
-        mReposicao = atividade1204.mercadoriaReposicao(nome, quantMin, quantMax, quantAtual, valorUni)
+        mReposicao = registroMercadorias.mercadoriaReposicao(nome, quantMin, quantMax, quantAtual, valorUni)
 
     valorTotal += quantAtual * valorUni
 
-    condicao = input("Deseja registrar mais produtos? (s/n):")
+    condicao = input("Deseja registrar mais produtos? (s - sim /n - não):")
 
 print("\nTodos os produtos registrados: ")
 print(mTotal)
